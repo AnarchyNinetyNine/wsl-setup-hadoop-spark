@@ -10,20 +10,20 @@ else
     echo "Java not found. Installing OpenJDK 11..."
     sudo apt update
     sudo apt install openjdk-11-jdk -y
-
-    echo "Locating JAVA_HOME..."
-    JAVA_PATH=$(readlink -f $(which java))
-    JAVA_HOME_DIR=$(dirname $(dirname $JAVA_PATH))
-
-    echo "Exporting JAVA_HOME..."
-    echo "export JAVA_HOME=$JAVA_HOME_DIR" >> ~/.bashrc
-    echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> ~/.bashrc
-
-    # Also export for current session
-    export JAVA_HOME=$JAVA_HOME_DIR
-    export PATH=$JAVA_HOME/bin:$PATH
-
-    echo "JAVA_HOME is set to: $JAVA_HOME"
-    echo "Verifying installation..."
-    java -version
 fi
+
+echo "Locating JAVA_HOME..."
+JAVA_PATH=$(readlink -f $(which java))
+JAVA_HOME_DIR=$(dirname $(dirname $JAVA_PATH))
+
+echo "Exporting JAVA_HOME..."
+echo "export JAVA_HOME=$JAVA_HOME_DIR" >> ~/.bashrc
+echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> ~/.bashrc
+
+# Also export for current session
+export JAVA_HOME=$JAVA_HOME_DIR
+export PATH=$JAVA_HOME/bin:$PATH
+
+echo "JAVA_HOME is set to: $JAVA_HOME"
+echo "Verifying installation..."
+java -version
