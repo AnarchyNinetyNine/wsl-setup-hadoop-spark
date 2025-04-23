@@ -47,7 +47,6 @@ cd wsl-setup-hadoop-spark
 If Java is not already installed, run:
 
 ```bash
-chmod +x setup_essentials.sh
 ./setup_essentials.sh
 ```
 
@@ -58,7 +57,6 @@ This script:
 ### 3. Install Hadoop and Spark
 
 ```bash
-chmod +x install_hadoop_spark.sh
 ./install_hadoop_spark.sh
 ```
 
@@ -173,6 +171,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-For questions, suggestions, or issues, please open an issue on the [GitHub repository](https://github.com/AnarchyNinetyNine/wsl-setup-hadoop-spark/issues) or contact the maintainer at [your-email@example.com].
+For questions, suggestions, or issues, please open an issue on the [GitHub repository](https://github.com/AnarchyNinetyNine/wsl-setup-hadoop-spark/issues) or contact the maintainer "Idris Elgarrab" at [franckenstein999@.com].
 
 Happy data processing! 🚀
