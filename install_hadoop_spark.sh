@@ -29,3 +29,40 @@ echo 'export PYSPARK_PYTHON=python3' >> ~/.bashrc
 
 # Apply changes
 source ~/.bashrc
+
+# Create systemd service for HDFS
+sudo tee /etc/systemd/system/hadoop-hdfs.service > /dev/null <<EOF
+[Unit]
+Description=Hadoop HDFS Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=$HADOOP_HOME/sbin/start-dfs.sh
+ExecStop=$HADOOP_HOME/sbin/stop-dfs.sh
+RemainAfterExit=true
+User=$USER
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Create systemd service for YARN
+sudo tee /etc/systemd/system/hadoop-yarn.service > /dev/null <<EOF
+[Unit]
+Description=Hadoop YARN Service
+After=network.target hadoop-hdfs.service
+
+[Service]
+Type=forking
+ExecStart=$HADOOP_HOME/sbin/start-yarn.sh
+ExecStop=$HADOOP_HOME/sbin/stop-yarn.sh
+User=$USER
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Reload systemd and start services
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
