@@ -16,7 +16,7 @@ This repository provides easy-to-use shell scripts to install and configure **Ap
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/wsl-setup-hadoop-spark.git
+git clone https://github.com/AnarchyNinetyNine/wsl-setup-hadoop-spark.git
 cd wsl-setup-hadoop-spark
 ```
 
