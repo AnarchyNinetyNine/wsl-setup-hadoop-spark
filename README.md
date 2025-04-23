@@ -57,7 +57,7 @@ This script:
 ### 3. Install Hadoop and Spark
 
 ```bash
-./install_hadoop_spark.sh
+./install_spark.sh
 ```
 
 This script:
