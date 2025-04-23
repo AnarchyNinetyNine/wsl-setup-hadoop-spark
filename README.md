@@ -171,6 +171,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-For questions, suggestions, or issues, please open an issue on the [GitHub repository](https://github.com/AnarchyNinetyNine/wsl-setup-hadoop-spark/issues) or contact the maintainer "Idris Elgarrab" at [franckenstein999@.com].
+For questions, suggestions, or issues, please open an issue on the [GitHub repository](https://github.com/AnarchyNinetyNine/wsl-setup-hadoop-spark/issues) or contact the maintainer **Idris Elgarrab** at [franckenstein999@.com].
 
 Happy data processing! 🚀
