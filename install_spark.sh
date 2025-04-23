@@ -2,6 +2,7 @@
 
 # Versions
 SPARK_VERSION=3.5.5
+SPARK_HOME=~/.spark/
 
 # Download and install Spark
 wget https://dlcdn.apache.org/spark/spark-3.5.5/spark-3.5.5-bin-hadoop3.tgz
@@ -19,3 +20,4 @@ source ~/.bashrc
 # Reload systemd and start services
 sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
+
