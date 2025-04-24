@@ -16,8 +16,3 @@ echo 'export PATH=$SPARK_HOME/bin:$SPARK_HOME/bin:$PATH' >> ~/.bashrc
 
 # Apply changes
 source ~/.bashrc
-
-# Reload systemd and start services
-sudo systemctl daemon-reexec
-sudo systemctl daemon-reload
-
