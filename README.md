@@ -60,6 +60,11 @@ This script:
 ./install_spark.sh
 ```
 
+up next, run:
+```bash
+source ~/.bashrc
+```
+
 This script:
 - Downloads **Hadoop 3.3.6** and **Spark 3.5.5**.
 - Extracts and moves them to hidden directories in your home folder (`~/.hadoop` and `~/.spark`).
